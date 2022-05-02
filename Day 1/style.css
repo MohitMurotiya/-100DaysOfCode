@@ -1,0 +1,40 @@
+html {
+    font-size: 10px;
+    background-size: cover;
+}
+
+.keys {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+}
+
+.key {
+    border: .4rem solid black;
+    border-radius: 10px;
+    margin: 15px;
+    padding: 10px;
+    transition: all .07s ease;
+    width: 100px;
+    text-align: center;
+    color: black;
+}
+
+.playing {
+    transform: scale(1.1);
+    border-color: #ffc600;
+    color: yellow;
+    box-shadow: 0 0 1rem #ffc600;
+}
+
+kbd {
+    display: block;
+    font-size: 40px;
+}
+
+.sound {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: black;
+}
