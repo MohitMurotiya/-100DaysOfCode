@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+    --base: #fff;
+    --umbrella: #FDD043;
+}
+section{
+    background: var(--base);
+}
+.section-content{
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    padding: 1.6rem 1.2rem;
+    margin: 0 180px;
+    max-width: 1280px;
+    min-height: 100vh;
+}
+.section-left, .section-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    padding: 0 48px;
+}
+.section-left img{
+    width: 100%;
+}
+#logo{
+    position: absolute;
+    height: 40px;
+    width: 60px;
+    object-fit: contain;
+    bottom: 10%;
+    left: 43%;
+    visibility: hidden;
+}
+.section-right h2{
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+.section-right h3{
+    font-weight: 500;
+}
+.section-right h6{
+    font-weight: 300;
+}
+.upload-container{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    /* margin-right: 5rem; */
+    margin-top: 1rem;
+    background: var(--umbrella);
+    color: #fff;
+    font-size: 1.1rem;
+    font-family: inherit;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 0.65rem 1rem;
+    cursor: default;
+    transition: all 0.5s ease;
+}
+.upload-container:hover{
+    background: var(--umbrella);
+    color: #fff;
+}
+.upload-container #reset-file{
+    visibility: hidden;
+    cursor: pointer;
+}
+.color-content{
+    margin-top: 1.5rem;
+    margin-bottom: 1rem
+}
+.color-content h3{
+    text-transform: uppercase;
+    font-size: 1.6rem;
+}
+.color{
+    width: 25px;
+    height: 25px;
+    background: none;
+    border-radius: 50%;
+    margin-right: 12px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.color-blue{
+    background-color: #2BB2E4;
+}
+.color-yellow{
+    background-color: #FDD043;
+}
+.color-pink{
+    background-color: #D9338B;
+}
+.color:hover{
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
+}
+.active-color{
+    border: 3px solid #222;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
+}
+.color-groups{
+    padding: 1rem 0;
+    display: flex;
+}
+
+/* Media Queries */
+@media screen and (max-width: 992px){
+    .section-content{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .section-right h2{
+        font-size: 36px;
+    }
+    .section-right h3{
+        font-weight: 500;
+    }
+    .section-right h6{
+        font-weight: 300;
+    }
+    .color-groups{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@keyframes spinning {
+        from { transform: rotate(0deg) }
+        to { transform: rotate(360deg) }
+    }
+    #loader {
+        height: 80px; 
+        width: 80px;
+        animation-name: spinning;
+        animation-duration: 1s;
+        fill: var(--umbrella);
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        /* visibility: hidden; */
+        display: none;
+    }
