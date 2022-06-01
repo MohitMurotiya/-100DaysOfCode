@@ -12,12 +12,13 @@ COLOR_BTNS.forEach(div => {
 
 function customUmbrella(e){
     let color = e.target.getAttribute('data-color');
+    let bg = e.target.getAttribute('data-bg');
     let colorNameClass = this.className;
     if(!this.classList.contains('active-color')){
         let colorName = colorNameClass.slice(colorNameClass.indexOf('-') + 1, colorNameClass.length);
         resetActiveBtns();
         this.classList.add('active-color');
-        setNewColor(colorName, color)
+        setNewColor(colorName, color, bg)
     }
 }
 
@@ -29,9 +30,11 @@ function resetActiveBtns(){
 }
 
 // set new color on the umbrella 
-function setNewColor(colorName, color){
+function setNewColor(colorName, color, bg){
     setTimeout(() => {
-        document.querySelector(':root').style.setProperty('--umbrella', color);
+        let root = document.querySelector(':root');
+        root.style.setProperty('--umbrella', color);
+        root.style.setProperty('--base', bg);
         document.querySelector('.section-left img').src = `images/${colorName}-umbrella.png`;
         umbrella.style.display = 'initial';
         loader.style.display = 'none';
