@@ -32,7 +32,7 @@ function resetActiveBtns(){
 function setNewColor(colorName, color){
     setTimeout(() => {
         document.querySelector(':root').style.setProperty('--umbrella', color);
-        document.querySelector('.banner-right img').src = `images/${colorName}-umbrella.png`;
+        document.querySelector('.section-left img').src = `images/${colorName}-umbrella.png`;
         umbrella.style.display = 'initial';
         loader.style.display = 'none';
     }, image.style.visibility == 'visible' ? 1000 : 0);
